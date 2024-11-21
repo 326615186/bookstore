@@ -1,0 +1,14 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: bookstore
+  profiles:
+    active: local
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper: com.mz.xm.sentiment.assistant.mapper
+  type-aliases-package: com.mz.xm.sentiment.assistant.entity

@@ -1,0 +1,22 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:mysql://192.168.1.1:8429/bookstore?characterEncoding=utf8&serverTimezone=GMT%2b8&tinyInt1isBit=false&autoReconnect=true&failOverReadOnly=false&allowUrlLocalInfile=true&allowMultiQueries=true
+    username: bookstore
+    password: BzT77ptV0
+    hikari:
+      connection-test-query: SELECT 1
+      max-lifetime: 240000
+      maximum-pool-size: 10
+      minimum-idle: 3
+      idle-timeout: 100000
+  servlet:
+    multipart:
+      max-file-size: 150MB
+      max-request-size: 150MB
+
+logging:
+  config: classpath:log4j2.xml
+  file:
+    path: /tmp/logs/
